@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <title>Parcel Sandbox</title>
+		<meta charset="UTF-8" />
+  </head>
+
+  <body>
+		
+		<div id="app"></div>
+		<!-- Exercise 1 start -->
+    <table id = "table" style = "width: 100%">
+      <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Address</th>
+				<th>Admin</th>
+				<th>Image</th>
+      </tr>
+      <tr>
+        <td>Webmaster</td>
+        <td>example@email.com</td>
+        <td>Demoland 123</td>
+				<td>X</td>
+				<td></td>
+      </tr>
+      <tr>
+        <td>User123</td>
+        <td>example@email.com</td>
+        <td>Userplace 123</td>
+				<td>-</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>AnotherUser222</td>
+				<td>example@email.com</td>
+				<td>AnotherPlace 21</td>
+				<td>-</td>
+				<td></td>
+			</tr>
+	
+		</table>
+		<!-- Exercise 1 end -->
+		<!-- Exercise 2 start -->
+		<form action = "" method="GET">
+			<fieldset>
+				<legend> Information </legend>
+					<label for ="uname">Username</label>
+					<input type = "text" onfocus="this.value=''" id = "input-username" placeholder="Account12"</input>
+					<label for = "email">Email</label>
+					<input type = "text" onfocus="this.value=''"id = "input-email"  placeholder = "account12@email.com"</input>
+					<label for = "addr">Address</label>
+					<input type = "text" onfocus="this.value=''"id = "input-address"  placeholder = "Street 123"</input>
+					<label for = "img">Image</label>
+					<input type = "file" id="input-image" value = "Upload"</input>
+					<label for ="admn">Admin</label>
+					<input type ="checkbox" onfocus="this.value=''"id ="input-admin" onclick="adminCheck()" value = "-" </input>
+					<input type="submit" id = "submitdata" value="Submit"/>
+					<h4 "-" id = "data"></h4>
+			
+
+			</fieldset>
+		</form>
+
+		<script>
+		function clearing() {
+			var table2 = document.getElementById("table");
+			var rowSum = table2.rows.length;
+			for (var x=rowSum-1; x>0; x--) {
+	 table2.deleteRow(x);
+	}
+		}
+		</script>
+		<button id = "emptytable" onclick = "clearing()">Clear table</button>
+
+		
+    <script src="src/index.js"></script>
+  </body>
+</html>
